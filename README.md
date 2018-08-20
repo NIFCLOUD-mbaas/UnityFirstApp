@@ -4,16 +4,16 @@ _2017/05/17作成 (2017/05/25修正)_
 ![RendaGame](/readme-img/RendaGame.png)
 
 GitHub<br>
-**https://github.com/NIFTYCloud-mbaas/UnityFirstApp**
+**https://github.com/NIFCloud-mbaas/UnityFirstApp**
 
 <div style="page-break-before:always"></div>
 
 ## コンテンツ概要
 
-* ニフティクラウド mobile backend の機能『データストア』を学習するための問題集です
-* ニフティクラウド mobile backend の利用登録（無料）が必要です
+* ニフクラ  mobile backend の機能『データストア』を学習するための問題集です
+* ニフクラ  mobile backend の利用登録（無料）が必要です
 * 問題用プロジェクトにはオンラインランキング機能が実装されていない状態の「シューティングゲーム」です
-* 既に実装済みのニフティクラウド mobile backend を利用するための準備（SDK導入など）方法の詳細はこちらをご覧ください<br>http://mb.cloud.nifty.com/doc/current/introduction/quickstart_unity.html
+* 既に実装済みのニフクラ  mobile backend を利用するための準備（SDK導入など）方法の詳細はこちらをご覧ください<br>http://mb.cloud.nifty.com/doc/current/introduction/quickstart_unity.html
 
 ## 問題について
 
@@ -28,7 +28,7 @@ GitHub<br>
 ## 問題に取り組む前の準備
 ### プロジェクトのダウンロード
 
-▼問題用プロジェクト▼<br>**https://github.com/NIFTYCloud-mbaas/UnityFirstApp/archive/Question.zip**
+▼問題用プロジェクト▼<br>**https://github.com/NIFCloud-mbaas/UnityFirstApp/archive/Question.zip**
 
 1. 上記リンクからzipファイル取得します
 1. ローカルに保存し、解凍します
@@ -48,7 +48,7 @@ GitHub<br>
 
 ![mBaaS](/readme-img/mBaaS.png)
 
-*  ニフティクラウド mobile backend にログインしアプリの新規作成を行います
+*  ニフクラ  mobile backend にログインしアプリの新規作成を行います
 * アプリ名はわかりやすいものにしましょう　例）「UnityShootGame」
 * アプリが作成されるとAPIキーが２種類（アプリケーションキーとクライアントキー）発行されます
 * 次で使用します
@@ -56,7 +56,7 @@ GitHub<br>
 ![Unity](/readme-img/Unity.png)
 
 * 【ヒエラルキー(Hierarchy)ビュー】から`NCMBSettings`を編集します
-* 先程ニフティクラウド mobile backend のダッシュボード上で確認したAPIキーを入力します
+* 先程ニフクラ  mobile backend のダッシュボード上で確認したAPIキーを入力します
 
 ![問題0-1](/readme-img/0-1.png)
 
@@ -65,7 +65,7 @@ GitHub<br>
 <div style="page-break-before:always"></div>
 
 ## 【問題１】<br>名前とスコアの保存をしてみよう！
-`/Assets/Scripts/saveScore.cs`を開きます。下図の__`saveScore`__ メソッドを編集し、引数の__`name`__ （アラートで入力した名前）と__`score`__ （シューティングゲームのスコア）の値をニフティクラウド mobile backend に保存する処理をコーディングしてください。
+`/Assets/Scripts/saveScore.cs`を開きます。下図の__`saveScore`__ メソッドを編集し、引数の__`name`__ （アラートで入力した名前）と__`score`__ （シューティングゲームのスコア）の値をニフクラ  mobile backend に保存する処理をコーディングしてください。
 
 ![問題1-1](/readme-img/1-1.png)
 
@@ -74,7 +74,7 @@ GitHub<br>
 * `name`を保存するフィールドを「`name`」、`score`を保存するフィールドを「`score`」として保存してください
 
 ### ヒント
-* ニフティクラウド mobile backend のUnityドキュメントをご参考ください<br>http://mb.cloud.nifty.com/doc/current/datastore/basic_usage_unity.html
+* ニフクラ  mobile backend のUnityドキュメントをご参考ください<br>http://mb.cloud.nifty.com/doc/current/datastore/basic_usage_unity.html
 
 <div style="page-break-before:always"></div>
 
@@ -105,7 +105,7 @@ GitHub<br>
 <div style="page-break-before:always"></div>
 
 ### 【問題１】答え合わせ
-#### ニフティクラウドmobile backend上での確認
+#### ニフクラ mobile backend上での確認
 ![mBaaS](/readme-img/mBaaS.png)
 
 * 保存されたデータを確認しましょう
@@ -131,7 +131,7 @@ GitHub<br>
 * 検索データ件数は５件とします
 
 ### ヒント
-* ニフティクラウド mobile backend のUnityドキュメントをご参考ください<br>http://mb.cloud.nifty.com/doc/current/datastore/ranking_unity.html
+* ニフクラ  mobile backend のUnityドキュメントをご参考ください<br>http://mb.cloud.nifty.com/doc/current/datastore/ranking_unity.html
 
 <div style="page-break-before:always"></div>
 
@@ -198,14 +198,14 @@ Unityから「再生」し、「LeaderBoard」(ランキングを見る)ボタ�
 
 * 問題の回答を実装した完全なプロジェクトをご用意しています
 
-▼完成版プロジェクト▼<br>**https://github.com/NIFTYCloud-mbaas/UnityFirstApp/archive/AnswerProject.zip**
+▼完成版プロジェクト▼<br>**https://github.com/NIFCloud-mbaas/UnityFirstApp/archive/AnswerProject.zip**
 
 * APIキーを設定してご利用ください
 
 ### おまけ
 
-* ニフティクラウド mobile backend を使って、シューティングゲームに「__ゴースト機能__」を実装することができます！
+* ニフクラ  mobile backend を使って、シューティングゲームに「__ゴースト機能__」を実装することができます！
 
  ![ghost0](/readme-img/ghost0.png)
 
-* 興味がある方はこちらをご覧ください<br>https://github.com/NIFTYCloud-mbaas/UnityFirstApp/blob/master/Ghost.md
+* 興味がある方はこちらをご覧ください<br>https://github.com/NIFCloud-mbaas/UnityFirstApp/blob/master/Ghost.md
