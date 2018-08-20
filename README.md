@@ -13,7 +13,7 @@ GitHub<br>
 * ニフクラ  mobile backend の機能『データストア』を学習するための問題集です
 * ニフクラ  mobile backend の利用登録（無料）が必要です
 * 問題用プロジェクトにはオンラインランキング機能が実装されていない状態の「シューティングゲーム」です
-* 既に実装済みのニフクラ  mobile backend を利用するための準備（SDK導入など）方法の詳細はこちらをご覧ください<br>http://mb.cloud.nifty.com/doc/current/introduction/quickstart_unity.html
+* 既に実装済みのニフクラ  mobile backend を利用するための準備（SDK導入など）方法の詳細はこちらをご覧ください<br>https://mbaas.nifcloud.com/doc/current/introduction/quickstart_unity.html
 
 ## 問題について
 
@@ -74,7 +74,7 @@ GitHub<br>
 * `name`を保存するフィールドを「`name`」、`score`を保存するフィールドを「`score`」として保存してください
 
 ### ヒント
-* ニフクラ  mobile backend のUnityドキュメントをご参考ください<br>http://mb.cloud.nifty.com/doc/current/datastore/basic_usage_unity.html
+* ニフクラ  mobile backend のUnityドキュメントをご参考ください<br>https://mbaas.nifcloud.com/doc/current/datastore/basic_usage_unity.html
 
 <div style="page-break-before:always"></div>
 
@@ -100,7 +100,7 @@ GitHub<br>
  * 保存成功時：「`保存に成功しました。objectId:*********`」
  * 保存失敗時：「`保存に失敗しました。エラーコード:******`」
 
-※ エラーコードが出た場合はこちらで確認できます<br>http://mb.cloud.nifty.com/doc/current/rest/common/error.html#REST_APIのエラーコードについて
+※ エラーコードが出た場合はこちらで確認できます<br>https://mbaas.nifcloud.com/doc/current/rest/common/error.html#REST_APIのエラーコードについて
 
 <div style="page-break-before:always"></div>
 
@@ -131,7 +131,7 @@ GitHub<br>
 * 検索データ件数は５件とします
 
 ### ヒント
-* ニフクラ  mobile backend のUnityドキュメントをご参考ください<br>http://mb.cloud.nifty.com/doc/current/datastore/ranking_unity.html
+* ニフクラ  mobile backend のUnityドキュメントをご参考ください<br>https://mbaas.nifcloud.com/doc/current/datastore/ranking_unity.html
 
 <div style="page-break-before:always"></div>
 
@@ -156,7 +156,7 @@ Unityから「再生」し、「LeaderBoard」(ランキングを見る)ボタ�
  * 検索成功時：「`検索に成功しました。`」
  * 検索失敗時：「`検索に失敗しました。エラーコード：******`」
 
-※ エラーコードが出た場合はこちらで確認できます<br>http://mb.cloud.nifty.com/doc/current/rest/common/error.html#REST_APIのエラーコードについて
+※ エラーコードが出た場合はこちらで確認できます<br>https://mbaas.nifcloud.com/doc/current/rest/common/error.html#REST_APIのエラーコードについて
 
 <div style="page-break-before:always"></div>
 
