@@ -1,5 +1,5 @@
 # 【Unity問題集】<br>オンラインランキング機能を作ってみよう！<br>「シューティングゲーム」
-_2017/05/17作成 (2017/05/25修正)_
+_2017/05/17作成 (2020/03/06修正)_
 
 ![RendaGame](/readme-img/RendaGame.png)
 
@@ -198,7 +198,7 @@ Unityから「再生」し、「LeaderBoard」(ランキングを見る)ボタ�
 
 * 問題の回答を実装した完全なプロジェクトをご用意しています
 
-▼完成版プロジェクト▼<br>**https://github.com/NIFTYCloud-mbaas/UnityFirstApp/archive/AnswerProject.zip**
+▼完成版プロジェクト▼<br>**https://github.com/NIFCLOUD-mbaas/UnityFirstApp/archive/AnswerProject.zip**
 
 * APIキーを設定してご利用ください
 
@@ -208,4 +208,4 @@ Unityから「再生」し、「LeaderBoard」(ランキングを見る)ボタ�
 
  ![ghost0](/readme-img/ghost0.png)
 
-* 興味がある方はこちらをご覧ください<br>https://github.com/NIFTYCloud-mbaas/UnityFirstApp/blob/master/Ghost.md
+* 興味がある方はこちらをご覧ください<br>https://github.com/NIFCLOUD-mbaas/UnityFirstApp/blob/master/Ghost.md
