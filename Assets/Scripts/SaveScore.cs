@@ -12,8 +12,6 @@ public class SaveScore : MonoBehaviour {
 		// 値を設定
 		obj ["name"] = name;
 		obj ["score"] = score;
-		/* ゴースト */
-		obj ["Log"] = Player.posList;
 		// 保存を実施
 		obj.SaveAsync ((NCMBException e) => {
 			if (e != null)
