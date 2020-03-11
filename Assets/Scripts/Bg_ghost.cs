@@ -10,6 +10,12 @@ public class Bg_ghost : MonoBehaviour {
 	public static bool readyGhost = false;
 	// Use this for initialization
 	void Start () {
+		StartCoroutine(Ghost());
+	}
+
+	IEnumerator Ghost()
+	{
+        yield return new WaitForSeconds(1);
 		NCMBQuery<NCMBObject> query = new NCMBQuery<NCMBObject> ("GameScore");
 		query.OrderByDescending ("score");
 		query.Limit = 1;
