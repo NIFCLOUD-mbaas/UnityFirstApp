@@ -21,9 +21,9 @@ public class Manager : MonoBehaviour
 		// ゲーム中ではなく、タッチまたはマウスクリック直後であればtrueを返す。
 		if (!IsPlaying()) {
 			/* ゴースト機能 */
-//			if (Bg_ghost.readyGhost == true)
-//				ghostButton.gameObject.SetActive (true);
-//			else
+			if (Bg_ghost.readyGhost == true)
+				ghostButton.gameObject.SetActive (true);
+			else
 				ghostButton.gameObject.SetActive (false);
 		}
 	}
