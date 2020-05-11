@@ -1,5 +1,5 @@
 ﻿/*******
- Copyright 2019 FUJITSU CLOUD TECHNOLOGIES LIMITED All Rights Reserved.
+ Copyright 2017-2020 FUJITSU CLOUD TECHNOLOGIES LIMITED All Rights Reserved.
 
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -347,9 +347,16 @@ namespace NCMB
 			return text;
 		}
 		//ネイティブからプッシュIDを受け取り開封通知
-		private void onAnalyticsReceived (string _pushId)
+		private void onAnalyticsReceived(string _pushId)
 		{
+			Debug.Log("=== onAnalyticsReceived " + _pushId);
 			NCMBAnalytics.TrackAppOpened (_pushId);
+		}
+
+		private void OnAnalyticsReceived2(string _pushId)
+		{
+			Debug.Log("=== OnAnalyticsReceived2 " + _pushId);
+			NCMBAnalytics.TrackAppOpened(_pushId);
 		}
 
 		//installation情報を削除

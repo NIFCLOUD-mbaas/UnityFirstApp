@@ -1,5 +1,5 @@
 ﻿/*******
- Copyright 2019 FUJITSU CLOUD TECHNOLOGIES LIMITED All Rights Reserved.
+ Copyright 2017-2020 FUJITSU CLOUD TECHNOLOGIES LIMITED All Rights Reserved.
 
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -37,6 +37,7 @@ namespace  NCMB
 	{
 		internal static void TrackAppOpened (string _pushId)	//(Android/iOS)-NCMBManager.onAnalyticsReceived-this.NCMBAnalytics
 		{
+			Debug.Log("=== TrackAppOpened " + _pushId);
 			//ネイティブから取得したpushIdからリクエストヘッダを作成
 			if (_pushId != null && NCMBManager._token != null && NCMBSettings.UseAnalytics) {
 
@@ -59,15 +60,18 @@ namespace  NCMB
 				ConnectType type = ConnectType.POST;
 				string content = json.ToString ();
 
+				Debug.Log("=== TrackAppOpened " + "【url】:" + url + Environment.NewLine + "【type】:" + type + Environment.NewLine + "【content】:" + content);
 				//ログを確認（通信前）
 				NCMBDebug.Log ("【url】:" + url + Environment.NewLine + "【type】:" + type + Environment.NewLine + "【content】:" + content);
 				// 通信処理
 				NCMBConnection con = new NCMBConnection (url, type, content, NCMBUser._getCurrentSessionToken ());
 				con.Connect (delegate(int statusCode, string responseData, NCMBException error) {
 					try {
-						NCMBDebug.Log ("【StatusCode】:" + statusCode + Environment.NewLine + "【Error】:" + error + Environment.NewLine + "【ResponseData】:" + responseData);
+					   Debug.Log("=== TrackAppOpened " + "【StatusCode】:" + statusCode + Environment.NewLine + "【Error】:" + error + Environment.NewLine + "【ResponseData】:" + responseData);
+					   NCMBDebug.Log ("【StatusCode】:" + statusCode + Environment.NewLine + "【Error】:" + error + Environment.NewLine + "【ResponseData】:" + responseData);
 					} catch (Exception e) {
 						error = new NCMBException (e);
+						Debug.Log("=== TrackAppOpened error: " + error.ToString());
 					}
 					return;
 				});
