@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
@@ -44,6 +45,6 @@ public class LeaderBoardManager : MonoBehaviour {
 	}
 
 	public void BackButton(){
-		Application.LoadLevel("Stage");
+		SceneManager.LoadScene("Stage");
 	} 
 }

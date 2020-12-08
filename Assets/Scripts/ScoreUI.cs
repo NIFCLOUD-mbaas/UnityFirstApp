@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 using UnityEngine.UI;
 
@@ -24,6 +25,6 @@ public class ScoreUI : MonoBehaviour {
 		name = nameInput.text;
 		Debug.Log (name);
 		FindObjectOfType<SaveScore> ().save (name, score);
-		Application.LoadLevel ("Stage");
+		SceneManager.LoadScene("Stage");
 	}
 }

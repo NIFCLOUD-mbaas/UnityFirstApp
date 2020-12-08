@@ -1,5 +1,5 @@
 /*******
- Copyright 2019 FUJITSU CLOUD TECHNOLOGIES LIMITED All Rights Reserved.
+ Copyright 2017-2020 FUJITSU CLOUD TECHNOLOGIES LIMITED All Rights Reserved.
 
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -217,15 +217,20 @@ namespace  NCMB
         	//save後処理 　オーバーライド用　ローカルのcurrentUserを反映する
 		internal override void _afterSave (int statusCode, NCMBException error)
 		{
-			// Base on AuthData
-			if (statusCode == 201 && this.AuthData != null && error == null) {
+			// register by SNS
+			if (statusCode == 201 && error == null
+					&& this.ContainsKey("authData") && this["authData"] != null) {
 				_saveCurrentUser((NCMBUser)this);
 			} else if (statusCode == 200 && error == null) {
-				// Base on SessionToken
-				if (_currentUser != null && _currentUser.ObjectId.Equals(this.ObjectId)) {
+				// reauthen by SNS
+				if (_currentUser == null
+						&& this.ContainsKey("authData") && this["authData"] != null) {
+					_saveCurrentUser((NCMBUser)this);
+				// update logged user
+				} else if (_currentUser != null && _currentUser.ObjectId.Equals(this.ObjectId)) {
 					this.SessionToken = _currentUser.SessionToken;
 					_saveCurrentUser((NCMBUser)this);
-					this._currentOperations.Remove("sessionToken");
+					this._currentOperations.Clear();
 				}
 			}
 		}
@@ -807,10 +812,10 @@ namespace  NCMB
 				throw new NCMBException (new ArgumentException ("Current User authData not exist"));
 			}
 
-			List<string> providerList = new List<string> () { "facebook", "twitter", "anonymous" };
+			List<string> providerList = new List<string> () { "facebook", "twitter", "apple", "anonymous" };
 
 			if (string.IsNullOrEmpty (provider) || !providerList.Contains (provider)) {
-				throw new NCMBException (new ArgumentException ("Provider must be facebook or twitter or anonymous"));
+				throw new NCMBException (new ArgumentException ("Provider must be facebook or twitter or apple or anonymous"));
 			}
 
 			// authDataの退避
@@ -855,10 +860,10 @@ namespace  NCMB
 		/// <returns> true:登録済　false:未登録 </returns>
 		public bool IsLinkWith (string provider)
 		{
-			List<string> providerList = new List<string> () { "facebook", "twitter", "anonymous" };
+			List<string> providerList = new List<string> () { "facebook", "twitter", "apple", "anonymous" };
 
 			if (string.IsNullOrEmpty (provider) || !providerList.Contains (provider)) {
-				throw new NCMBException (new ArgumentException ("Provider must be facebook or twitter or anonymous"));
+				throw new NCMBException (new ArgumentException ("Provider must be facebook or twitter or apple or anonymous"));
 			}
 
 			if (this.AuthData == null) {
@@ -875,9 +880,9 @@ namespace  NCMB
 		/// <returns>指定されたSNSのauthData</returns>
 		public Dictionary<string, object> GetAuthDataForProvider (string provider)
 		{
-			List<string> providerList = new List<string> () { "facebook", "twitter", "anonymous" };
+			List<string> providerList = new List<string> () { "facebook", "twitter", "apple", "anonymous" };
 			if (string.IsNullOrEmpty (provider) || !providerList.Contains (provider)) {
-				throw new NCMBException (new ArgumentException ("Provider must be facebook or twitter or anonymous"));
+				throw new NCMBException (new ArgumentException ("Provider must be facebook or twitter or apple or anonymous"));
 			}
 
 			Dictionary<string, object> authData = new Dictionary<string, object> ();
@@ -900,11 +905,18 @@ namespace  NCMB
 				authData.Add ("oauth_token", twitterParam ["oauth_token"]);
 				authData.Add ("oauth_token_secret", twitterParam ["oauth_token_secret"]);
 				break;
-			case "anonymous":
-				var anonymousAuthData = (Dictionary<string, object>)this ["authData"];
-				var anonymousParam = (Dictionary<string, object>)anonymousAuthData ["anonymous"];
-				authData.Add ("id", anonymousParam ["id"]);
+			case "apple":
+				var appleAuthData = (Dictionary<string, object>)this["authData"];
+				var appleParam = (Dictionary<string, object>)appleAuthData["apple"];
+				authData.Add("id", appleParam["id"]);
+				authData.Add("access_token", appleParam["access_token"]);
+				authData.Add("client_id", appleParam["client_id"]);
 				break;
+			case "anonymous":
+			    var anonymousAuthData = (Dictionary<string, object>)this ["authData"];
+			    var anonymousParam = (Dictionary<string, object>)anonymousAuthData ["anonymous"];
+			    authData.Add ("id", anonymousParam ["id"]);
+			    break;
 			}
 
 			return authData;
