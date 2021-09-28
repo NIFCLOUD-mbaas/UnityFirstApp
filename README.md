@@ -24,8 +24,8 @@ GitHub<br>
 * 問題は２問あります
 * ２問クリアすると「シューティングゲーム」にオンラインランキング機能を実装したアプリが完成します
 * 問題を取り組む上で必要な開発環境は以下です
-   - Unity 3Dが動作するWindows PC もしくはMac PC
-   - Unity5.3以降
+   - Unityが動作するWindows PC もしくはMac PC
+   - Unity2019以降
    - Unity SDK v4.0.4
 
 <div style="page-break-before:always"></div>
