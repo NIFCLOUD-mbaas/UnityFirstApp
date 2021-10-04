@@ -8,6 +8,9 @@ GitHub<br>
 
 <div style="page-break-before:always"></div>
 
+* 本サンプルは不具合がある場合、issue等から報告いただくようにお願いいたします
+* 作成日：2016/6（更新日：2020/3）
+
 ## コンテンツ概要
 
 * ニフクラ mobile backend の機能『データストア』を学習するための問題集です
@@ -15,13 +18,15 @@ GitHub<br>
 * 問題用プロジェクトにはオンラインランキング機能が実装されていない状態の「シューティングゲーム」です
 * 既に実装済みのニフクラ mobile backend を利用するための準備（SDK導入など）方法の詳細はこちらをご覧ください<br>https://mbaas.nifcloud.com/doc/current/introduction/quickstart_unity.html
 
+
 ## 問題について
 
 * 問題は２問あります
 * ２問クリアすると「シューティングゲーム」にオンラインランキング機能を実装したアプリが完成します
 * 問題を取り組む上で必要な開発環境は以下です
-   - Unity 3Dが動作するWindows PC もしくはMac PC
-   - Unity5.3以降
+   - Unityが動作するWindows PC もしくはMac PC
+   - Unity2019以降
+   - Unity SDK v4.0.4
 
 <div style="page-break-before:always"></div>
 
