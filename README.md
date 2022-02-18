@@ -1,5 +1,5 @@
 # 【Unity問題集】<br>オンラインランキング機能を作ってみよう！<br>「シューティングゲーム」
-_2017/05/17作成 (2020/03/06修正)_
+_2017/05/17作成 (2022/02/16修正)_
 
 ![RendaGame](/readme-img/RendaGame.png)
 
@@ -9,7 +9,7 @@ GitHub<br>
 <div style="page-break-before:always"></div>
 
 * 本サンプルは不具合がある場合、issue等から報告いただくようにお願いいたします
-* 作成日：2016/6（更新日：2020/3）
+* 作成日：2016/06（更新日：2022/02）
 
 ## コンテンツ概要
 
@@ -25,8 +25,8 @@ GitHub<br>
 * ２問クリアすると「シューティングゲーム」にオンラインランキング機能を実装したアプリが完成します
 * 問題を取り組む上で必要な開発環境は以下です
    - Unityが動作するWindows PC もしくはMac PC
-   - Unity2019以降
-   - Unity SDK v4.0.4
+   - Unity 2020.3.20f1 (LTS)
+   - Unity SDK v4.4.1
 
 <div style="page-break-before:always"></div>
 
