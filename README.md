@@ -27,6 +27,8 @@ GitHub<br>
    - Unityが動作するWindows PC もしくはMac PC
    - Unity 2020.3.20f1 (LTS)
    - Unity SDK v4.4.1
+   - Xcode Version 14.0
+   - iPhone X (iOS 16)
 
 <div style="page-break-before:always"></div>
 
